@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="centos7配置DNS分离, 璃人">
-    <meta name="description" content="DNS分离center&amp;gt;centos7添加一块网卡，选择仅主机模式 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式给局域网客户机配ip给广域网客户机">
+    <meta name="description" content="DNS分离centos7添加一块网卡，选择仅主机模式 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式给局域网客户机配ip给广域网客户机配ipvim &amp;#x">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -477,7 +477,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DNS分离center-gt"><a href="#DNS分离center-gt" class="headerlink" title="DNS分离center&gt;"></a><center>DNS分离center&gt;</h1><p><img src="/images/1.png">centos7添加一块网卡，选择仅主机模式<img src="/images/2.png"> 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式<img src="/images/3.png">给局域网客户机配ip<img src="/images/4.png">给广域网客户机配ipvim &#x2F;etc&#x2F;named.conf进行配置<img src="/images/5.png"></p>
+                <h1 id="DNS分离"><a href="#DNS分离" class="headerlink" title="DNS分离"></a><center>DNS分离</center></h1><p><img src="/images/1.png">centos7添加一块网卡，选择仅主机模式<img src="/images/2.png"> 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式<img src="/images/3.png">给局域网客户机配ip<img src="/images/4.png">给广域网客户机配ipvim &#x2F;etc&#x2F;named.conf进行配置<img src="/images/5.png"></p>
 <p>将监听的ip和允许的范围都改为any<img src="/images/6.png"></p>
 <p>将根域解析文件的内容注释掉或删除vim &#x2F;etc&#x2F;named.rfc1912.zones<img src="/images/7.png">对&#x2F;etc&#x2F;named.rfc1912.zones进行配置，添加：<br>$$<br>view “lan” {        match-clients { 192.168.100.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.lan”;        };         zone “.” IN {          type hint;          file “named.ca”;        }; };  view “wan” {        match-clients { 12.0.0.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.wan”;        }; };<br>$$<br>用“cp -p”命令保留权限复制一份“name.localhost”文件，命名为“liren.com.lan”。然后用vim编辑器对其进行编辑</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`输入：cd /var/named/ 输入：cp -p named.localhost kgc.com.lan 输入：vim liren.com.lan`</span><br></pre></td></tr></table></figure>
