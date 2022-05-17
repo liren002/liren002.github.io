@@ -1169,28 +1169,7 @@ $(function () {
     </a>
 </div>
 
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    
-
-    
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
-            }
-        </script>
-    
-
-<!-- 白天和黑夜主题 -->
+    <!-- 白天和黑夜主题 -->
 <div class="sum-moon-box">
   <a class="btn-floating btn-large waves-effect waves-light" οnclick="switchNightMode()" title="切换主题" >
     <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
@@ -1220,8 +1199,7 @@ $(function () {
   <div id="stars3"></div>  
 </div>
 
-
-/* 模式判断 */
+    /* 模式判断 */
 <script>
     /* 模式判断 */
     if (localStorage.getItem('isDark') === '1') {
@@ -1232,6 +1210,29 @@ $(function () {
         $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
     }
 </script>
+
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
 
 
     <!-- 雪花特效 -->
