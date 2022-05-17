@@ -12,7 +12,7 @@
   right: 0;
 }
 
-#loading-box>.spinner-box {
+#loading-box > .spinner-box {
   position: fixed;
   z-index: 1001;
   display: flex;
@@ -62,7 +62,7 @@ div.loaded div.loading-right-bg {
 }
 
 div.loaded div.spinner-box {
-  display: none !important;
+  display: none !important; 
 }
 
 @keyframes configure-clockwise {
