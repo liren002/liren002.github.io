@@ -415,15 +415,30 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-06-06
                 </div>
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    417
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -434,14 +449,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DNS分离"><a href="#DNS分离" class="headerlink" title="DNS分离"></a><center>DNS分离</center></h1><p><img src="/images/1.png">centos7添加一块网卡，选择仅主机模式<img src="/images/2.png"> 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式<img src="/images/3.png">给局域网客户机配ip<img src="/images/4.png">给广域网客户机配ipvim &#x2F;etc&#x2F;named.conf进行配置<img src="/images/5.png"></p>
-<p>将监听的ip和允许的范围都改为any<img src="/images/6.png"></p>
-<p>将根域解析文件的内容注释掉或删除vim &#x2F;etc&#x2F;named.rfc1912.zones<img src="/images/7.png">对&#x2F;etc&#x2F;named.rfc1912.zones进行配置，添加：<br>$$<br>view “lan” {        match-clients { 192.168.100.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.lan”;        };         zone “.” IN {          type hint;          file “named.ca”;        }; };  view “wan” {        match-clients { 12.0.0.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.wan”;        }; };<br>$$<br>用“cp -p”命令保留权限复制一份“name.localhost”文件，命名为“liren.com.lan”。然后用vim编辑器对其进行编辑</p>
+                <h1 id="DNS分离"><a href="#DNS分离" class="headerlink" title="DNS分离"></a><center>DNS分离</center></h1><p><img src="https://s3.bmp.ovh/imgs/2022/06/06/6d8da8648cf0665b.png">centos7添加一块网卡，选择仅主机模式<img src="https://s3.bmp.ovh/imgs/2022/06/06/8e189df2db57bb98.png"> 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式<img src="https://s3.bmp.ovh/imgs/2022/06/06/9f25f2e70cc30b40.png">给局域网客户机配ip<img src="https://s3.bmp.ovh/imgs/2022/06/06/0ee3b631ecd19136.png">给广域网客户机配ipvim &#x2F;etc&#x2F;named.conf进行配置<img src="https://s3.bmp.ovh/imgs/2022/06/06/d3538ae533e70ecb.png"></p>
+<p>将监听的ip和允许的范围都改为any<img src="https://s3.bmp.ovh/imgs/2022/06/06/b5106835eb7ddf10.png"></p>
+<p>将根域解析文件的内容注释掉或删除vim &#x2F;etc&#x2F;named.rfc1912.zones<img src="https://s3.bmp.ovh/imgs/2022/06/06/d46112d99150db7a.png">对&#x2F;etc&#x2F;named.rfc1912.zones进行配置，添加：<br>$$<br>view “lan” {        match-clients { 192.168.100.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.lan”;        };         zone “.” IN {          type hint;          file “named.ca”;        }; };  view “wan” {        match-clients { 12.0.0.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.wan”;        }; };<br>$$<br>用“cp -p”命令保留权限复制一份“name.localhost”文件，命名为“liren.com.lan”。然后用vim编辑器对其进行编辑</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`输入：cd /var/named/ 输入：cp -p named.localhost kgc.com.lan 输入：vim liren.com.lan`</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/8.png"></p>
-<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       192.168.100.1 www     IN A    192.168.100.99 dns     IN A    192.168.88<br>$$<br>用“cp -p”命令保留权限复制一份“kgc.com.lan”文件，命名为“liren.com.wan”。然后用vim编辑器对其进行编辑<code>输入：cp -p liren.com.lan liren.com.wan 输入：vim.liren.com.wan</code><img src="/images/9.png"></p>
-<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       12.0.0.1 www     IN A    12.0.0.1 dns     IN A    12.0.0.1<br>$$<br>重启dns服务<code>systemctl restart named</code>分别使用两台客户机测试<img src="/images/10.png"><img src="/images/11.png"></p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/06/3a86f4a922b0d034.png"></p>
+<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       192.168.100.1 www     IN A    192.168.100.99 dns     IN A    192.168.88<br>$$<br>用“cp -p”命令保留权限复制一份“kgc.com.lan”文件，命名为“liren.com.wan”。然后用vim编辑器对其进行编辑<code>输入：cp -p liren.com.lan liren.com.wan 输入：vim.liren.com.wan</code><img src="https://s3.bmp.ovh/imgs/2022/06/06/4d3e2c389f24b98e.png"></p>
+<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       12.0.0.1 www     IN A    12.0.0.1 dns     IN A    12.0.0.1<br>$$<br>重启dns服务<code>systemctl restart named</code>分别使用两台客户机测试<img src="https://s3.bmp.ovh/imgs/2022/06/06/8718809af1646927.png"><img src="https://s3.bmp.ovh/imgs/2022/06/06/7dd6021a803d52cc.png"></p>
 <p>都可以对域名进行解析</p>
 
                 
@@ -958,6 +973,9 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">1.4k</span>
             
             
             
