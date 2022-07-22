@@ -499,7 +499,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06"]
+            data: ["2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07"]
         },
         yAxis: {
             type: 'value',
@@ -509,7 +509,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,3,1],
+                data: [0,0,0,0,0,0,0,0,0,0,3,1,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -551,7 +551,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Steins;Gate","value":1},{"name":"linux","value":1},{"name":"提权","value":1}],
+                data: [{"name":"提权","value":1},{"name":"Steins;Gate","value":1},{"name":"linux","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -575,7 +575,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["DNS","命运石之门","雷net","linux","提权","windows","nc"]
+                data: ["提权","windows","nc","命运石之门","雷net","DNS","linux"]
             }
         ],
         yAxis: [
@@ -758,8 +758,20 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/DNS/">
-                <span class="chip center-align waves-effect waves-light chip-default">DNS</span>
+            <a href="/tags/%E6%8F%90%E6%9D%83/">
+                <span class="chip center-align waves-effect waves-light chip-default">提权</span>
+            </a>
+            
+            
+            
+            <a href="/tags/windows/">
+                <span class="chip center-align waves-effect waves-light chip-default">windows</span>
+            </a>
+            
+            
+            
+            <a href="/tags/nc/">
+                <span class="chip center-align waves-effect waves-light chip-default">nc</span>
             </a>
             
             
@@ -776,26 +788,14 @@
             
             
             
+            <a href="/tags/DNS/">
+                <span class="chip center-align waves-effect waves-light chip-default">DNS</span>
+            </a>
+            
+            
+            
             <a href="/tags/linux/">
                 <span class="chip center-align waves-effect waves-light chip-default">linux</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%8F%90%E6%9D%83/">
-                <span class="chip center-align waves-effect waves-light chip-default">提权</span>
-            </a>
-            
-            
-            
-            <a href="/tags/windows/">
-                <span class="chip center-align waves-effect waves-light chip-default">windows</span>
-            </a>
-            
-            
-            
-            <a href="/tags/nc/">
-                <span class="chip center-align waves-effect waves-light chip-default">nc</span>
             </a>
             
             
@@ -1084,6 +1084,12 @@
 </div>
     </div>
 </footer>
+
+
+<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
 
 <div class="progress-bar"></div>
 

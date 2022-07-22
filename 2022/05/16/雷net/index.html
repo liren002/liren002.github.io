@@ -415,7 +415,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-09
+                    2022-07-23
                 </div>
                 
 
@@ -453,7 +453,7 @@
 <h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><h3 id="一、棋子"><a href="#一、棋子" class="headerlink" title="一、棋子"></a>一、棋子</h3><p>每个人有4个link(L)’链接器’和4个Virus(V)’病毒’<br>进房间后自己双方都有八个棋子，L跟V的位置分布自己调，点一下是V，点两下是L<br>L跟V可以互相吃掉，同一格就能吃，没有大小之分，棋子一回合只能走一格，上下左右，双方门口有入口(exit)，棋子可以进入到对方的家里，也就是服务器server也就是服务器</p>
 <h3 id="二、规则"><a href="#二、规则" class="headerlink" title="二、规则"></a>二、规则</h3><p>游戏人数：2人。<br>游戏方式：暗棋（双方棋子的身份对对方不可见，参考军棋）。<br>游戏道具：棋盘，棋子，终端卡。<br>棋盘：目标是把“插头”Link送入对方的Server里，从Exit的位置进去。<br>棋盘的图片：</p>
 <p><img src="https://s3.bmp.ovh/imgs/2022/06/06/ec8410e4028a05bd.jpg"></p>
-<p>吃掉对方的L+进入对方服务器的L&#x3D;胜利<br>吃掉对方的V+进入对方服务器的V&#x3D;失败</p>
+<p>吃掉对方的L+进入对方服务器的L&#x3D;4,胜利<br>吃掉对方的V+进入对方服务器的V&#x3D;4,失败</p>
 <h3 id="三、技能"><a href="#三、技能" class="headerlink" title="三、技能"></a>三、技能</h3><p>技能有1234567  技能有七个<br>通常版只有1234没有567，四个技能都可以使用<br>新版有七个，但只能选五个使用</p>
 <p>技能1 link boost(LB) ：加速套在自己的棋子上，套上之后棋子可以一步走两格<br>场上只能存在一个自己的LB，每局用无数次</p>
 <p>技能2 就叫防火墙吧(iptables) ： 套在棋子上，无敌，别人进不来，所以棋子不会被吃。也可以用来卡位置。<br>场上只能存在一个自己的防火墙，每局用无数次<br>技能3 查毒(VC) ： 强制翻面一个棋子看身份（对面）</p>
@@ -1112,6 +1112,12 @@
 </div>
     </div>
 </footer>
+
+
+<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
 
 <div class="progress-bar"></div>
 
