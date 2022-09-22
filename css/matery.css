@@ -2169,7 +2169,7 @@ p.search-result-summary{
 /* 滚动条 */
 ::-webkit-scrollbar-thumb {
     background-color: #FF2A68;
-    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(36,140,222) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
     border-radius: 3em;
 }
 ::-webkit-scrollbar-track {
