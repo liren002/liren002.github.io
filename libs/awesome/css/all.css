@@ -6051,7 +6051,7 @@ readers do not read off random characters that represent icons */
 .fa-github:before {
   content: "\f09b"; }
 
-.fa-github-alt:before {
+.fa-youtube-alt:before {
   content: "\f113"; }
 
 .fa-github-square:before {
