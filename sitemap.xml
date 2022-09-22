@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://liren002.top/2022/09/24/Web-%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8/</loc>
-    
-    <lastmod>2022-09-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://liren002.top/2022/05/16/%E9%9B%B7net/</loc>
     
     <lastmod>2022-07-22</lastmod>
@@ -103,7 +94,7 @@
 
   <url>
     <loc>http://liren002.top/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,56 +102,49 @@
   
   <url>
     <loc>http://liren002.top/tags/%E6%8F%90%E6%9D%83/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/tags/windows/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/tags/nc/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/tags/DNS/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/tags/linux/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/tags/%E5%91%BD%E8%BF%90%E7%9F%B3%E4%B9%8B%E9%97%A8/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/tags/%E9%9B%B7net/</loc>
-    <lastmod>2022-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://liren002.top/tags/Web-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -169,28 +153,21 @@
   
   <url>
     <loc>http://liren002.top/categories/%E6%8F%90%E6%9D%83/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/categories/linux/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://liren002.top/categories/Steins-Gate/</loc>
-    <lastmod>2022-09-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://liren002.top/categories/Web/</loc>
-    <lastmod>2022-09-21</lastmod>
+    <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
