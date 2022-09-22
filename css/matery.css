@@ -101,11 +101,13 @@ blockquote {
 }
 
 pre {
-    padding: 2rem 1rem 1rem 3rem !important;
+    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
+    margin: 1rem 0 !important;
+    background: #272822;
+    overflow: auto;
     border-radius: 0.35rem;
     tab-size: 4;
 }
-
 .code-area::after {
     content: " ";
     position: absolute;
@@ -119,7 +121,6 @@ pre {
     -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
-
 code {
     padding: 1px 5px;
     top: 13px !important;
@@ -129,7 +130,6 @@ code {
     background-color: #f8f8f8;
     border-radius: 2px;
 }
-
 .code_copy {
     position: absolute;
     top: 0.7rem;
@@ -138,7 +138,6 @@ code {
     filter: invert(50%);
     cursor: pointer;
 }
-
 .codecopy_notice {
     position: absolute;
     top: 0.7rem;
@@ -147,14 +146,13 @@ code {
     filter: invert(50%);
     opacity: 0;
 }
-
 .code_lang {
     position: absolute;
     top: 1.2rem;
     right: 46px;
     line-height: 0;
     font-weight: bold;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: normal;
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
@@ -163,7 +161,7 @@ code {
 .code-expand {
     position: absolute;
     top: 4px;
-    right: 0;
+    right: 0px;
     filter: invert(50%);
     padding: 7px;
     z-index: 999 !important;
@@ -178,13 +176,37 @@ code {
 }
 
 .code-closed pre::before {
-    height: 0;
+    height: 0px;
 }
 
 pre code {
     padding: 0;
     color: #e8eaf6;
     background-color: #272822;
+}
+
+pre[class*="language-"] {
+    padding: 1.2em;
+    margin: .5em 0;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #e8eaf6;
+    white-space: pre-wrap !important;
+}
+
+.line-numbers-rows {
+    border-right-width: 0px !important;
+}
+
+.line-numbers {
+    padding: 1.5rem 1.5rem 1.5rem 3.2rem !important;
+    margin: 1rem 0 !important;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.35rem;
+    tab-size: 4;
 }
 
 /* 键盘 kbd 标签样式 */
