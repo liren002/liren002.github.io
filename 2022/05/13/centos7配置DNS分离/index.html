@@ -55,7 +55,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/img/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/meiyou.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">璃人</span>
                 </a>
@@ -154,12 +154,12 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/img/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/meiyou.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">璃人</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Steins;Gate
             
         </div>
     </div>
@@ -450,14 +450,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DNS分离"><a href="#DNS分离" class="headerlink" title="DNS分离"></a><center>DNS分离</center></h1><p><img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/6d8da8648cf0665b.png">centos7添加一块网卡，选择仅主机模式<img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/8e189df2db57bb98.png"> 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式<img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/9f25f2e70cc30b40.png">给局域网客户机配ip<img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/0ee3b631ecd19136.png">给广域网客户机配ipvim &#x2F;etc&#x2F;named.conf进行配置<img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/d3538ae533e70ecb.png"></p>
-<p>将监听的ip和允许的范围都改为any<img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/b5106835eb7ddf10.png"></p>
-<p>将根域解析文件的内容注释掉或删除vim &#x2F;etc&#x2F;named.rfc1912.zones<img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/d46112d99150db7a.png">对&#x2F;etc&#x2F;named.rfc1912.zones进行配置，添加：<br>$$<br>view “lan” {        match-clients { 192.168.100.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.lan”;        };         zone “.” IN {          type hint;          file “named.ca”;        }; };  view “wan” {        match-clients { 12.0.0.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.wan”;        }; };<br>$$<br>用“cp -p”命令保留权限复制一份“name.localhost”文件，命名为“liren.com.lan”。然后用vim编辑器对其进行编辑</p>
+                <h1 id="DNS分离"><a href="#DNS分离" class="headerlink" title="DNS分离"></a><center>DNS分离</center></h1><p><img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/6d8da8648cf0665b.png">centos7添加一块网卡，选择仅主机模式<img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/8e189df2db57bb98.png"> 第一块网卡配置ip 192.168.100.1作为局域网网关第二块网卡配置ip 12.0.0.1作为广域网网关客户机都选择仅主机模式<img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/9f25f2e70cc30b40.png">给局域网客户机配ip<img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/0ee3b631ecd19136.png">给广域网客户机配ipvim &#x2F;etc&#x2F;named.conf进行配置<img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/d3538ae533e70ecb.png"></p>
+<p>将监听的ip和允许的范围都改为any<img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/b5106835eb7ddf10.png"></p>
+<p>将根域解析文件的内容注释掉或删除vim &#x2F;etc&#x2F;named.rfc1912.zones<img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/d46112d99150db7a.png">对&#x2F;etc&#x2F;named.rfc1912.zones进行配置，添加：<br>$$<br>view “lan” {        match-clients { 192.168.100.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.lan”;        };         zone “.” IN {          type hint;          file “named.ca”;        }; };  view “wan” {        match-clients { 12.0.0.0&#x2F;24; };         zone “liren.com” IN {          type master;          file “liren.com.wan”;        }; };<br>$$<br>用“cp -p”命令保留权限复制一份“name.localhost”文件，命名为“liren.com.lan”。然后用vim编辑器对其进行编辑</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`输入：cd /var/named/ 输入：cp -p named.localhost kgc.com.lan 输入：vim liren.com.lan`</span><br></pre></td></tr></table></figure>
 
-<p><img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/3a86f4a922b0d034.png"></p>
-<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       192.168.100.1 www     IN A    192.168.100.99 dns     IN A    192.168.88<br>$$<br>用“cp -p”命令保留权限复制一份“kgc.com.lan”文件，命名为“liren.com.wan”。然后用vim编辑器对其进行编辑<code>输入：cp -p liren.com.lan liren.com.wan 输入：vim.liren.com.wan</code><img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/4d3e2c389f24b98e.png"></p>
-<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       12.0.0.1 www     IN A    12.0.0.1 dns     IN A    12.0.0.1<br>$$<br>重启dns服务<code>systemctl restart named</code>分别使用两台客户机测试<img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/8718809af1646927.png"><img src="/img/loading.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/7dd6021a803d52cc.png"></p>
+<p><img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/3a86f4a922b0d034.png"></p>
+<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       192.168.100.1 www     IN A    192.168.100.99 dns     IN A    192.168.88<br>$$<br>用“cp -p”命令保留权限复制一份“kgc.com.lan”文件，命名为“liren.com.wan”。然后用vim编辑器对其进行编辑<code>输入：cp -p liren.com.lan liren.com.wan 输入：vim.liren.com.wan</code><img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/4d3e2c389f24b98e.png"></p>
+<p>更改文件配置<br>$$<br>$TTL 1D @       IN SOA  liren.com. admin.liren.com. (                                        0       ; serial                                        1D      ; refresh                                        1H      ; retry                                        1W      ; expire                                        3H )    ; minimum        NS      liren.com.        A       12.0.0.1 www     IN A    12.0.0.1 dns     IN A    12.0.0.1<br>$$<br>重启dns服务<code>systemctl restart named</code>分别使用两台客户机测试<img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/8718809af1646927.png"><img src="/medias/meiyou.gif" data-original="https://s3.bmp.ovh/imgs/2022/06/06/7dd6021a803d52cc.png"></p>
 <p>都可以对域名进行解析</p>
 
                 
@@ -661,10 +661,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/img/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/meiyou.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/img/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/meiyou.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -713,7 +713,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/img/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="雷net">
+                        <img src="/medias/meiyou.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="雷net">
                         
                         <span class="card-title">雷net</span>
                     </div>
@@ -766,7 +766,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/img/loading.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/meiyou.gif" data-original="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
                         <span class="card-title">Hello World</span>
                     </div>
@@ -1360,7 +1360,7 @@ color="255,0,0" opacity='0.7' zIndex="-2" count="220" src="//cdn.bootcss.com/can
   <!-- 鼠标点击特效  富强民主文明 -->
     <script src="/js/click_show_text.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":250,"height":400},"mobile":{"show":true},"log":false});</script>
+
         <style>
             [bg-lazy] {
                 background-image: none !important;
@@ -1373,6 +1373,6 @@ color="255,0,0" opacity='0.7' zIndex="-2" count="220" src="//cdn.bootcss.com/can
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":250,"height":400},"mobile":{"show":true},"log":false});</script></body>
 
 </html>
